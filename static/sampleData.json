@@ -1,0 +1,60 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "name": "My First Item",
+        "category": "ComputerVision",
+        "title": "Google Launches TensorFlow 3D Using LiDAR & Depth Sensors for Advanced AR Experiences",
+        "details": "TF 3D is a library of 3D depth learning models, including 3D semantic segmentation, 3D object detection, and 3D instance segmentation",
+        "link": "https://mobile-ar.reality.news/news/google-launches-tensorflow-3d-using-lidar-depth-sensors-for-advanced-ar-experiences-0384343/"
+      },
+      {
+        "id": 2,
+        "name": "Another item",
+        "category": "Classification",
+        "title": "TensorFlow Graph Neural Networks (GNNs), a library designed to make it easy to work with graph structured data using TensorFlow.",
+        "details": "This can be used for spam and anomaly detection, traffic estimation, YouTube content labeling",
+        "link": "https://blog.tensorflow.org/2021/11/introducing-tensorflow-gnn.html?linkId=8008555"
+      },
+      {
+        "id": 3,
+        "name": "Third Item",
+        "category": "ComputerVision",
+        "title": "Deploying TinyML",
+        "details": "Learn to program in TensorFlow Lite for microcontrollers so that you can write the code, and deploy your model to your very own tiny microcontroller. Before you know it, you’ll be implementing an entire TinyML application.",
+        "link": "https://pll.harvard.edu/course/deploying-tinyml?delta=0"
+      },
+      {
+        "id": 4,
+        "name": "Here is the Fourth",
+        "category": "Classification",
+        "title": "PyTorch Live enables anyone to build mobile ML demo apps using JavaScript,",
+        "details": "PyTorch Live looks set to accelerate the success of the machine learning library. The tools use React Native for building cross-platform visual user interfaces and PyTorch Mobile powers on-device inference.",
+        "link": "https://artificialintelligence-news.com/2021/12/02/meta-releases-pytorch-live-creating-mobile-ml-demos-minutes/"
+      },
+      {
+        "id": 5,
+        "name": "High Five",
+        "category": "Similarity",
+        "title": "TensorFlow Similarity Supports Fast Query Search Index on Pre-trained Models",
+        "details": "Similarity learning is the process of finding similar items, from similar clothes in images to person identification using face pictures.",
+        "link": "https://www.infoq.com/news/2021/10/TensorFlow-fast-query-search/"
+      },
+      {
+        "id": 6,
+        "name": "High Five",
+        "category": "Similarity",
+        "title": "NVIDIA Merlin HugeCTR is an open-source, recommender system, dedicated DL framework. ",
+        "details": "HugeCTR TensorFlow Embedding Plugin helps accelerate embedding",
+        "link": "https://www.geeky-gadgets.com/hugectr-tensorflow-28-09-2021/"
+      },
+      {
+        "id": 7,
+        "name": "High Five",
+        "category": "Embedded",
+        "title": "Edge Impulse Combines AutoML And TinyML To Make AI Ubiquitous ",
+        "details": "The company has built a cloud-based platform to enable developers to build AI models targeting microcontrollers.",
+        "link": "https://www.forbes.com/sites/janakirammsv/2021/07/19/edge-impulse-combines-automl-and-tinyml-to-make-ai-ubiquitous/?sh=270a28ce5ffd"
+      }
+    ]
+  }

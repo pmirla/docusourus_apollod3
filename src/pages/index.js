@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
-
+import MyCards from "../components/MyCards"
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -33,13 +33,26 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       {/* <HomepageHeader /> */}
-      <main>
+      <div className="hero hero--primary text--center" style={{height: '25rem'}}>
+        <div className="container">
+          <h1 className="hero__title">{siteConfig.title}</h1>
+          <p className="hero__subtitle">{`We are Full Stack Data Scientists`}</p>
+        </div>
+      </div>
+
+
       <div className="container">
-      <h1 className="hero__title">{siteConfig.title}</h1>
-      <h1 >{`We are Full Stack Data Scientists`}</h1>
        </div>
         <HomepageFeatures />
-      </main>
+        <div className="hero hero--primary text--center" style={{height: '1rem'}}>
+        <div className="container">
+          <p className="hero__subtitle">{`Top Machine Learning Stories in 2021`}</p>
+        </div>
+        </div>
+
+        <MyCards jsonUrl={'https://secret-ocean-49799.herokuapp.com/https://storage.googleapis.com/nytimes_quiz/sampleData1.json'}/>
+
+
     </Layout>
   );
 }
