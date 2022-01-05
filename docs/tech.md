@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0
-title: Math Equations
+title: Tech Tips
 description: Writing LaTeX Math Equations
 ---
 import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
@@ -20,16 +20,14 @@ Intented audience:  **Developers**.
 ## Links to topics here
 
 
- How to Create pages?[link](tutorial-basics/create-a-page)
 
  Created React Page[link](/mac/my-react-pages)
 
 
  [Created Markdown Page](/mac/my-markdown-page)
 
- [How to create a document](tutorial-basics/create-a-document)
 
- [Link to created document](hello)
+ [Link to created ml document](ml)
 
  [Markdown MDX import](/mac/someOtherDoc)
 

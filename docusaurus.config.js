@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'ApolloD3',
-  tagline: 'Data Science Consulting',
+  title: 'Apollo Data Science',
+  tagline: 'We are Consulting Full Stack Data Scientists',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -65,14 +65,28 @@ const config = {
             type: 'doc',
             docId: 'tech',
             position: 'left',
-            label: 'TechTips',
+            label: 'Tech Tips',
+          },
+          {
+            type: 'doc',
+            docId: 'cloud',
+            position: 'left',
+            label: 'Cloud',
+          },
+          {
+            type: 'doc',
+            docId: 'ml',
+            position: 'left',
+            label: 'Machine Learning',
+          },
+          {
+            type: 'doc',
+            docId: 'tutorials',
+            position: 'left',
+            label: 'Tutorials',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          
         ],
       },
       footer: {
