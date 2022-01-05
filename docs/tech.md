@@ -24,7 +24,6 @@ Intented audience:  **Developers**.
 
  Created React Page[link](/mac/my-react-pages)
 
- Let's see how to [Create a page](/create-a-page).
 
  [Created Markdown Page](/mac/my-markdown-page)
 
