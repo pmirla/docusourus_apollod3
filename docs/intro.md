@@ -1,16 +1,24 @@
 ---
-sidebar_position: 1
+sidebar_position: 0
 ---
 
-# Tutorial Intro
+# Tech Tips
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Intented audience:  **Developers**.
 
-## Getting Started
+## Links to topics here
 
-Get started by **creating a new site**.
+ [How to Create pages?](tutorial-basics/create-a-page)
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+ [Created React Page](/my-react-pages)
+
+ [Created Markdown Page](/my-markdown-page)
+
+ [How to create a document](tutorial-basics/create-a-document)
+
+ [Link to created document](hello)
+
+ [Markdown MDX import](/someOtherDoc)
 
 ## Generate a new site
 
