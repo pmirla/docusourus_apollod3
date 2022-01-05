@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '@theme/Layout'
 import CodeBlock from '@theme/CodeBlock';
 import MyComponentSource from '!!raw-loader!./my-markdown-page.md';
-import styles from './styles.module.css';
+import styles from '../styles.module.css';
 
 function MyComponent() {
   return (
