@@ -44,7 +44,7 @@ export default function Home() {
       <div className="container">
        </div>
         <HomepageFeatures />
-        <div className="hero hero--primary text--center" style={{height: '1rem'}}>
+        <div className="hero  text--center" style={{height: '1rem'}}>
         <div className="container">
           <p className="hero__subtitle">{`Top Machine Learning Stories in 2021`}</p>
         </div>
@@ -52,6 +52,7 @@ export default function Home() {
 
         <MyCards jsonUrl={'https://secret-ocean-49799.herokuapp.com/https://storage.googleapis.com/nytimes_quiz/sampleData1.json'}/>
 
+        <div className="color" style={{backgroundColor: 'var(--ifm-color-primary-lighter)'}} />
 
     </Layout>
   );

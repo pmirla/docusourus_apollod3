@@ -1,0 +1,116 @@
+import PartialExample from './_markdown-partial-example.mdx'
+import TOCInline from '@theme/TOCInline'
+import Head from '@docusaurus/Head';
+import Link from '@docusaurus/Link';
+import Masonry from 'react-masonry-css'
+
+<TOCInline toc={toc} />
+
+# Install brew
+
+brew is package manager for machine
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/pavanmirla/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+```
+
+# Install Conda
+```
+brew install miniforge
+
+```
+
+# Setup Conda environment
+
+```
+conda create -n conda-ml python=3.9
+conda activate conda-ml
+conda init zsh
+```
+
+# Install tensorflow for Mac m1
+```
+# https://developer.apple.com/metal/tensorflow-plugin/
+conda install -c apple tensorflow-deps
+python -m pip install tensorflow-macos
+python -m pip install tensorflow-metal
+
+# https://stackoverflow.com/a/53546634
+conda install ipykernel
+ipython kernel install --user --name=pmirlam1
+
+```
+
+
+# clone these python ML libraries
+
+```
+mkdir -p ~/ml-py39
+cd ~/ml-py39/
+
+git clone https://github.com/openai/CLIP
+git clone https://github.com/dribnet/clipit
+git clone https://github.com/CompVis/taming-transformers.git
+
+
+```
+
+# Install pytorch
+
+```
+
+conda install numpy~=1.19.2
+conda install -c pytorch pytorch==1.9.0 torchvision==0.10.0
+conda install braceexpand omegaconf torch-optimizer \
+              tqdm ftfy regex kornia pytorch-lightning \
+              einops scikit-image cssutils wrapt opt_einsum \
+              gast astunparse termcolor pandas ipywidgets \
+              jupyterlab
+pip install git+https://github.com/pvigier/perlin-numpy
+pip install torch-tools
+
+```
+
+
+# Clone other repo for tests
+
+```
+pip install cmake
+
+mkdir -p ~/src/github.com/BachiLi
+cd ~/src/github.com/BachiLi/
+
+git clone https://github.com/BachiLi/diffvg
+cd diffvg
+
+git submodule update --init --recursive
+
+DIFFVG_CUDA=0 python setup.py install
+
+
+```
+
+# Open Jupyter Notebook
+
+```
+conda activate conda-ml-py39
+cd ~/ml-py39/ && jupyter lab
+
+```
+
+# CUDA errors
+
+Some notebooks need to have CUDA enabled.
+So, this was a failed attempt to test M1 for Machine learning.
+I will post update on this page 
+
+
+
+References:
+
+https://github.com/ctsrc/machine-learning-on-macbook-pro-m1
+
+
+
