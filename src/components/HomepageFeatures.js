@@ -4,7 +4,7 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'We build and deploy Machine Learning models',
+    title: 'Recommendation Engine',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
@@ -13,7 +13,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'We assist in data architecture design and process automation',
+    title: 'Anomaly Detection',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
@@ -22,7 +22,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'We train your staff to fasten digital transformation ',
+    title: 'Information Extraction ',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
@@ -30,6 +30,34 @@ const FeatureList = [
       </>
     ),
   },
+  {
+    title: 'Investment Model ',
+    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+       Developed customized tools for transforming data into insights. 
+      </>
+    ),
+  },
+  {
+    title: 'Advanced Visualizations',
+    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+       Developed customized tools for transforming data into insights. 
+      </>
+    ),
+  },
+  {
+    title: 'Risk Modelling',
+    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+       Developed customized tools for transforming data into insights. 
+      </>
+    ),
+  },
+
 ];
 
 function Feature({Svg, title, description}) {

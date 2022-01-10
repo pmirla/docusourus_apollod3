@@ -1,0 +1,153 @@
+import PartialExample from './_markdown-partial-example.mdx'
+import TOCInline from '@theme/TOCInline'
+import Head from '@docusaurus/Head';
+import Link from '@docusaurus/Link';
+import Masonry from 'react-masonry-css'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+<TOCInline toc={toc} />
+
+# MultiIndex examples
+
+## Data
+
+```jsx
+import pandas as pd
+stocks = pd.read_csv("http://bit.ly/smallstocks")
+```
+
+
+<details>
+  <summary><code>stocks</code> </summary>
+
+```jsx
+Date	Close	Volume	Symbol
+0	2016-10-03	31.50	14070500	CSCO
+1	2016-10-03	112.52	21701800	AAPL
+2	2016-10-03	57.42	19189500	MSFT
+3	2016-10-04	113.00	29736800	AAPL
+4	2016-10-04	57.24	20085900	MSFT
+5	2016-10-04	31.35	18460400	CSCO
+6	2016-10-05	57.64	16726400	MSFT
+7	2016-10-05	31.59	11808600	CSCO
+8	2016-10-05	113.05	21453100	AAPL
+```
+</details>
+
+
+## Series MultiIndex
+
+```jsx
+ser = stocks.groupby(['Symbol','Date']).Close.mean()
+```
+<details>
+  <summary><code>ser</code> </summary>
+
+```jsx
+ser.index
+MultiIndex([('AAPL', '2016-10-03'),
+            ('AAPL', '2016-10-04'),
+            ('AAPL', '2016-10-05'),
+            ('CSCO', '2016-10-03'),
+            ('CSCO', '2016-10-04'),
+            ('CSCO', '2016-10-05'),
+            ('MSFT', '2016-10-03'),
+            ('MSFT', '2016-10-04'),
+            ('MSFT', '2016-10-05')],
+           names=['Symbol', 'Date'])
+
+ser
+Symbol  Date      
+AAPL    2016-10-03    112.52
+        2016-10-04    113.00
+        2016-10-05    113.05
+CSCO    2016-10-03     31.50
+        2016-10-04     31.35
+        2016-10-05     31.59
+MSFT    2016-10-03     57.42
+        2016-10-04     57.24
+        2016-10-05     57.64
+Name: Close, dtype: float64
+
+```
+</details>
+
+## Series unstack
+
+```jsx
+ser.unstack()
+```
+
+<details>
+  <summary><code>unstack</code> </summary>
+
+```jsx
+Date	2016-10-03	2016-10-04	2016-10-05
+Symbol			
+AAPL	112.52	113.00	113.05
+CSCO	31.50	31.35	31.59
+MSFT	57.42	57.24	57.64
+```
+
+</details>
+
+## Plot
+```js
+ax = ser.unstack().plot(kind='bar', subplots=True, rot=0, figsize=(9, 7), layout=(2, 3))
+
+```
+
+## Selection
+
+```js
+ser.loc['AAPL']
+ser.loc['AAPL','2016-10-03']
+ser.loc[:,'2016-10-03']
+```
+
+
+<details>
+  <summary><code>selection</code> </summary>
+
+```jsx
+Date
+2016-10-03    112.52
+2016-10-04    113.00
+2016-10-05    113.05
+Name: Close, dtype: float64
+
+112.52
+
+Symbol
+AAPL    112.52
+CSCO     31.50
+MSFT     57.42
+Name: Close, dtype: float64
+
+```
+
+</details>
+
+
+## DataFrame MultiIndex
+
+```jsx
+stocks.set_index(['Symbol','Date'], inplace=True)
+stocks.sort_index(inplace=True)
+```
+
+
+## Dataframe Selection
+
+
+```jsx
+
+stocks.loc['AAPL']
+stocks.loc[('AAPL','2016-10-03'),:]
+stocks.loc[(['AAPL','MSFT'],'2016-10-03'),:]
+stocks.loc[('AAPL',['2016-10-03']),:]
+stocks.loc[(slice(None),['2016-10-03', '2016-10-04']),:]
+```
+

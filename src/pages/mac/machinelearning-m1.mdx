@@ -4,9 +4,11 @@ import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import Masonry from 'react-masonry-css'
 
+# Table of Contents 
+
 <TOCInline toc={toc} />
 
-# Install brew
+## Install brew
 
 brew is package manager for machine
 ```
@@ -16,13 +18,13 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ```
 
-# Install Conda
+## Install Conda
 ```
 brew install miniforge
 
 ```
 
-# Setup Conda environment
+## Setup Conda environment
 
 ```
 conda create -n conda-ml python=3.9
@@ -30,7 +32,7 @@ conda activate conda-ml
 conda init zsh
 ```
 
-# Install tensorflow for Mac m1
+## Install tensorflow for Mac m1
 ```
 # https://developer.apple.com/metal/tensorflow-plugin/
 conda install -c apple tensorflow-deps
@@ -44,7 +46,7 @@ ipython kernel install --user --name=pmirlam1
 ```
 
 
-# clone these python ML libraries
+## clone these python ML libraries
 
 ```
 mkdir -p ~/ml-py39
@@ -57,7 +59,7 @@ git clone https://github.com/CompVis/taming-transformers.git
 
 ```
 
-# Install pytorch
+## Install pytorch
 
 ```
 
@@ -74,7 +76,7 @@ pip install torch-tools
 ```
 
 
-# Clone other repo for tests
+## Clone other repo for tests
 
 ```
 pip install cmake
@@ -92,7 +94,7 @@ DIFFVG_CUDA=0 python setup.py install
 
 ```
 
-# Open Jupyter Notebook
+## Open Jupyter Notebook
 
 ```
 conda activate conda-ml-py39
@@ -100,7 +102,7 @@ cd ~/ml-py39/ && jupyter lab
 
 ```
 
-# CUDA errors
+## CUDA errors
 
 Some notebooks need to have CUDA enabled.
 So, this was a failed attempt to test M1 for Machine learning.

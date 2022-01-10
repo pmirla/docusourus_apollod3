@@ -31,6 +31,8 @@ Intented audience:  **Developers**.
 
  [Markdown MDX import](/mac/someOtherDoc)
 
+[Pandas MultiIndex](/pandas/multiindex)
+
 :::note
 
 Pages do not have sidebars, only docs do.
