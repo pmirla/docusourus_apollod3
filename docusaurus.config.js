@@ -57,7 +57,7 @@ const config = {
         title: 'D3Axis',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/D3AXISLOGO.PNG',
         },
         items: [
           {

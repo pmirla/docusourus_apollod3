@@ -6,6 +6,10 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
 import MyCards from "../components/MyCards"
+import D3axisVideo from '@site/static/img/D3AxisVideo4.mp4';
+import D3AxisGIF from '@site/static/img/D3AxisGIF.gif';
+
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -33,6 +37,16 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       {/* <HomepageHeader /> */}
+
+      <div className="col-6 col-s-9">
+        <video autoPlay={true} width={"100%"} muted loop>
+          <source src={D3axisVideo} type="video/mp4" />
+          <source src={D3axisVideo} type="video/ogg" />
+          Your browser does not support HTML5 video.
+        </video>
+     </div>
+
+
       <div className="hero hero--primary text--left" style={{height: '25rem'}}>
         <div className="container">
           <h1 className="hero__title">About {siteConfig.title}</h1>
@@ -46,6 +60,8 @@ export default function Home() {
        </div>
         <HomepageFeatures />
         <div className="hero  text--center" style={{height: '1rem'}}>
+
+  
         <div className="container">
           <p className="hero__subtitle">{`Top Machine Learning Stories in 2021`}</p>
         </div>

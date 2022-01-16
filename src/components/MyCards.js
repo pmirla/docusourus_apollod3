@@ -23,11 +23,10 @@ export default function MyCards(props) {
       if (!isLoading)
         if (typeof data.res !== "undefined") {
           var fetchedData = data.res;
-          debugger
              // Convert array to JSX items
             items = fetchedData.map(function(item) {
            return  <div key={item.id}>
-             <NoteCard note={item}/>
+             <NoteCard key={item.id} note={item}/>
           </div>
       
       });
