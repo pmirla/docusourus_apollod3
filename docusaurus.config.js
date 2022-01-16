@@ -56,7 +56,7 @@ const config = {
         defaultMode: 'dark',
         disableSwitch: true,
         respectPrefersColorScheme: true,
-  
+
       },
       
       navbar: {
