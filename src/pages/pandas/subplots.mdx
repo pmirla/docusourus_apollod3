@@ -1,0 +1,136 @@
+import TOCInline from '@theme/TOCInline'
+import Head from '@docusaurus/Head';
+import Link from '@docusaurus/Link';
+import Masonry from 'react-masonry-css'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+<TOCInline toc={toc} />
+
+# Subplots 
+
+## Base
+
+```jsx
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+plots = ['plot0','plot1','plot2','plot3']
+nrows = 2
+ncols = int(len(plots)/nrows)
+
+fig, ax2d = plt.subplots(nrows,ncols)
+fig.suptitle("Figure Title")
+fig.set_size_inches(7,7)
+fig.subplots_adjust(wspace=0.4)
+ax = np.ravel(ax2d)
+for count,p in enumerate(plots):
+  ax[count].text(0.5,0.5, str((count,p)), fontsize = 16)
+  ax[count].set_title(p)
+  ax[count].legend()
+```
+
+
+<details>
+  <summary><code>stocks</code> </summary>
+
+```jsx
+Date	Close	Volume	Symbol
+0	2016-10-03	31.50	14070500	CSCO
+1	2016-10-03	112.52	21701800	AAPL
+2	2016-10-03	57.42	19189500	MSFT
+3	2016-10-04	113.00	29736800	AAPL
+4	2016-10-04	57.24	20085900	MSFT
+5	2016-10-04	31.35	18460400	CSCO
+6	2016-10-05	57.64	16726400	MSFT
+7	2016-10-05	31.59	11808600	CSCO
+8	2016-10-05	113.05	21453100	AAPL
+```
+</details>
+
+## 
+
+## Add Subplot
+
+```jsx
+
+def plot_ten_subplots(data_f , gvkey_list_scores,company_names ):
+  fig = plt.figure(figsize=(20, 6), dpi=80)
+  for l, n, c in zip(range(251,259), gvkey_list_scores, company_names):
+    ax = fig.add_subplot(l)
+    ax.title.set_text(c)
+    df = (data_f[n]+1).cumprod()-1
+    df.plot(ax=ax, xlim=([datetime.date(2003, 12, 31), datetime.date(2021, 11, 30)]))
+  plt.subplots_adjust(left=0.1,
+                    bottom=0.1, 
+                    right=0.9, 
+                    top=0.9, 
+                    wspace=0.4, 
+                    hspace=0.4)
+  plt.show()
+  
+```
+
+  ## Subplots with pandas
+
+  ```jsx
+    axes = gdp.plot(subplots=True, layout=(10, 3), figsize=(25, 26), sharex=True, sharey=True)
+    # flatten the axes array to easily access any subplot
+    axes = axes.flat
+    # extract the figure object
+    fig = axes[0].get_figure()
+    # use tight_layout
+    fig.tight_layout()
+
+
+
+
+```
+
+### Save as pdf files
+
+```
+def multiplot(df_bsl, gvkey, comp_name, s_exp):
+
+  fig = plt.figure(figsize=(30, 10), dpi=80)
+  SMALL_SIZE = 6
+  MEDIUM_SIZE = 10
+  BIGGER_SIZE = 12
+  matplotlib.rc('font', size=SMALL_SIZE)
+
+  # plt.style.use('fivethirtyeight')
+  # plt.style.use('dark_background')
+  plt.style.use('ggplot')
+  ax = fig.add_subplot(251)
+  ax.title.set_text(comp_name)
+  df = (df_bsl+1).cumprod()-1
+  df.plot(ax=ax,
+            xlim=([datetime.date(2015, 12, 31), datetime.date(2021, 11, 30)]), 
+            ylim=([-1.5,4.5]), 
+            sharex= True)
+  ax = fig.add_subplot(252)
+  ax.title.set_text(comp_name)
+  index = [w.replace('TP_BARRA_GEMLT_', '') for w in s_exp.index]
+  factors = s_exp.values
+  factors = factors/np.linalg.norm(factors)
+
+  df_s = pd.DataFrame({'factor exp': factors,
+                   }, index=index)
+  
+  df_s.plot.barh(ax=ax,xlim=([-1.0,1.0]), color="gray")
+  fig.tight_layout()
+  plt.show()
+  return fig
+
+
+pp = PdfPages('drive/MyDrive/SAVEPANDFASFILE.pdf')
+for gvkey, comp_name in zip(gvkey_list_scores[1:4], company_names[1:4]):
+  pp.savefig(multiplot(gdp[gvkey], gvkey, comp_name,  (csexsp.loc[gvkey,:])),facecolor="white",orientation='portrait',bbox_inches='tight',pad_inches=.4)
+pp.close()
+
+
+```
+[Reference](https://pythonguides.com/matplotlib-save-as-pdf/)
+[List for multiple layouts](https://python-course.eu/numerical-programming/creating-subplots-in-matplotlib.php)
+[Multiple exmaples for subplots](https://stackoverflow.com/questions/3584805/in-matplotlib-what-does-the-argument-mean-in-fig-add-subplot111)

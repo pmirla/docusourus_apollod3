@@ -33,11 +33,15 @@ Intented audience:  **Developers**.
 
 [Pandas MultiIndex](/pandas/multiindex)
 
+[Pandas subplots](/pandas/subplots)
+
 :::note
 
-Pages do not have sidebars, only docs do.
+Data
 
 :::
+
+[Awesome Quant](https://github.com/wilsonfreitas/awesome-quant#data-sources)
 
 :::info
 

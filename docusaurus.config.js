@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'ApolloD3',
-  tagline: 'Partners in your Tech Innovation Journey',
+  title: 'D3Axis',
+  tagline: 'Next Gen Data Driven Decisions',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -54,7 +54,7 @@ const config = {
     ({
       
       navbar: {
-        title: 'ApolloD3',
+        title: 'D3Axis',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -68,7 +68,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'cloud',
+            docId: 'cloud-tips/index',
             position: 'left',
             label: 'Cloud',
           },

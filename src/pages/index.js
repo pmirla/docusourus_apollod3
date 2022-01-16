@@ -36,7 +36,7 @@ export default function Home() {
       <div className="hero hero--primary text--left" style={{height: '25rem'}}>
         <div className="container">
           <h1 className="hero__title">About {siteConfig.title}</h1>
-          <p className="hero__subtitle">{`We increase Business efficiencies with advanced technology solutions and facilitate better decision-making through modern data science stack.
+          <p className="hero__subtitle">{`We increase Business efficiencies with advanced technology solutions and modern data science stack.
            We are a professional team of Data Scientists and Full Stack Developers`}</p>
         </div>
       </div>
