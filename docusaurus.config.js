@@ -52,6 +52,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+        respectPrefersColorScheme: true,
+  
+      },
       
       navbar: {
         title: 'D3Axis',
@@ -88,6 +94,7 @@ const config = {
           
         ],
       },
+  
       footer: {
         style: 'dark',
         links: [
@@ -131,7 +138,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} ApolloD3.`,
+        copyright: `Copyright © ${new Date().getFullYear()} D3Axis.`,
       },
       prism: {
         theme: lightCodeTheme,

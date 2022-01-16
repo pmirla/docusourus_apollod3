@@ -47,25 +47,22 @@ export default function Home() {
      </div>
 
 
-      <div className="hero hero--primary text--left" style={{height: '25rem'}}>
-        <div className="container">
-          <h1 className="hero__title">About {siteConfig.title}</h1>
-          <p className="hero__subtitle">{`We increase Business efficiencies with advanced technology solutions and modern data science stack.
-           We are a professional team of Data Scientists and Full Stack Developers`}</p>
-        </div>
-      </div>
-
-
+  
       <div className="container">
        </div>
+      
+       <div className="hero  text--center" style={{height: '1rem'}}>
+        <div className="container">
+          <p className="hero__subtitle">{`Our Expertise`}</p>
+        </div>
+       </div>
+
         <HomepageFeatures />
         <div className="hero  text--center" style={{height: '1rem'}}>
-
-  
         <div className="container">
           <p className="hero__subtitle">{`Top Machine Learning Stories in 2021`}</p>
         </div>
-        </div>
+       </div>
 
         <MyCards jsonUrl={'https://secret-ocean-49799.herokuapp.com/https://storage.googleapis.com/nytimes_quiz/sampleData1.json'}/>
 
