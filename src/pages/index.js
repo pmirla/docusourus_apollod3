@@ -39,7 +39,7 @@ export default function Home() {
       {/* <HomepageHeader /> */}
 
       <div className="col-6 col-s-9">
-        <video playsinline autoPlay={true} width={"100%"} muted loop>
+        <video playsinline autoPlay={true} width={"100%"} muted defaultMuted loop oncontextmenu={"return false"}  preload={"auto"}>
           <source src={D3axisVideo} type="video/mp4" />
           <source src={D3axisVideo} type="video/ogg" />
           Your browser does not support HTML5 video.
