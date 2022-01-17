@@ -8,7 +8,12 @@ import HomepageFeatures from '../components/HomepageFeatures';
 import MyCards from "../components/MyCards"
 import D3axisVideo from '@site/static/img/D3AxisVideo4.mp4';
 import D3AxisGIF from '@site/static/img/D3AxisGIF.gif';
+import GIF1 from '@site/static/img/GIF1.gif';
+import GIF2 from '@site/static/img/GIF2.gif';
 
+var ReactDOM = require('react-dom');
+var Carousel = require('react-responsive-carousel').Carousel;
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -30,6 +35,23 @@ function HomepageHeader() {
   );
 }
 
+
+function CarouselCom() {
+  return (
+
+    <Carousel showArrows={true} autoPlay={true}>
+                <div>
+                    <img src={GIF1} />
+               
+                </div>
+                <div>
+                    <img src={GIF2} />
+         
+                </div>
+              
+            </Carousel>
+  )
+}
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -38,17 +60,18 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       {/* <HomepageHeader /> */}
 
-      <div className="col-6 col-s-9">
+      {/* <div className="col-6 col-s-9">
         <video playsinline autoPlay={true} width={"100%"} muted defaultMuted loop oncontextmenu={"return false"}  preload={"auto"}>
           <source src={D3axisVideo} type="video/mp4" />
           <source src={D3axisVideo} type="video/ogg" />
           Your browser does not support HTML5 video.
         </video>
-     </div>
+     </div> */}
 
 
   
       <div className="container">
+      <CarouselCom/>
        </div>
       
        <div className="hero  text--center" style={{height: '1rem'}}>
@@ -56,7 +79,7 @@ export default function Home() {
           <p className="hero__subtitle">{`Our Expertise`}</p>
         </div>
        </div>
-
+       
         <HomepageFeatures />
         <div className="hero  text--center" style={{height: '1rem'}}>
         <div className="container">
